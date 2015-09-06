@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="io.github.dsouzadyn.mtodo.CreateTodoActivity">
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/rootLayoutDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/createTodoFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            android:layout_marginBottom="@dimen/fab_margin_bottom"
+            android:src="@drawable/ic_done">
+
+        </android.support.design.widget.FloatingActionButton>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleImageView"
+        android:layout_alignTop="@+id/rootLayoutDetail"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_title"
+        android:minWidth="40dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleEditText"
+        android:layout_alignTop="@+id/rootLayout"
+        android:layout_toEndOf="@+id/titleImageView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/hint_title" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionImageView"
+        android:layout_below="@+id/titleImageView"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_description"
+        android:minWidth="40dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/descriptionEditText"
+        android:layout_below="@+id/titleEditText"
+        android:layout_alignStart="@+id/titleEditText"
+        android:layout_alignEnd="@+id/titleEditText"
+        android:lines="10"
+        android:hint="@string/hint_description"
+        android:gravity="top"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/priorityImageView"
+        android:layout_below="@+id/descriptionEditText"
+        android:layout_alignParentStart="true"
+        android:minWidth="40dp"
+        android:src="@drawable/ic_whatshot" />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/prioritySpinner"
+        android:layout_alignTop="@+id/priorityImageView"
+        android:layout_alignStart="@+id/descriptionEditText"
+        android:entries="@array/priority_array"
+        android:prompt="@string/priority_promt"/>
+
+
+</RelativeLayout>

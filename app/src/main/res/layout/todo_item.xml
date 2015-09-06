@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvTodoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/todoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="24sp"
+                android:text="@string/todo_title"
+                />
+            <TextView
+                android:id="@+id/todoDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:textSize="16sp"
+                android:text="@string/todo_description"
+                android:layout_below="@+id/todoTitle"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:src="@drawable/ic_whatshot"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@+id/todoDescription"
+                android:id="@+id/imageView"
+                android:contentDescription="@string/todo_priority_icon" />
+            <TextView
+                android:id="@+id/todoPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="@string/todo_priority"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doneImageButton"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_done"
+                android:onClick="onDoneButtonClick"
+                android:background="@color/accent"
+                android:clickable="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
